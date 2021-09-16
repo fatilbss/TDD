@@ -1,8 +1,13 @@
+package TDD;
 
+import static org.junit.Assert.assertThat;
+
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 
 public class DictionnaryTest{
 
@@ -13,17 +18,24 @@ public class DictionnaryTest{
 }
 
 @Test public void testDictionnaryName(){
-    assertThat(dict.getName(), equalTo("Example"));
+    assertThat(dict.getName(),equals("Example"));
 }
 
 @Test public void testDictionnaryIsEmpty(){
-    assertThat(dict.IsEmpty(), equalTo(1));
+    assertThat(dict.IsEmpty(), equals(true));
 }
 
 @Test public void testOneTranslation() {
  Dictionnary.addTranslation("contre", "against");
- assertThat(dict.getTranslation("contre"), equalTo("against"));
+ assertThat(dict.getTranslation("contre"), equals("against"));
  Dictionnary.addTranslation("voiture", "car");
- assertThat(dict.getTranslation("voiture"), equalTo("car"));
+ assertThat(dict.getTranslation("voiture"), equals("car"));
 
 }
+
+@After
+public void cleanUp() {
+    dict = null;
+}
+}
+

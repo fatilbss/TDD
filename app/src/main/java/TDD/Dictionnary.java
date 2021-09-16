@@ -1,27 +1,28 @@
-import org.junit.Test;
+package TDD;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Dictionnary {
 
     private String name;
-    private Map<String, String> translations;
+    private static Map<String, String> translations;
 
     public Dictionnary(String name){
         this.name = name;
-        this.translations = new HashMap<>();
+        Dictionnary.translations = new HashMap<>();
     }
     
     public String getName(){
     return this.name;
 }
 
-    public boolean IsEmpty(String name){
+    public boolean IsEmpty(){
         if (translations.size() ==0) 
         {
-            return 1;
+            return true;
         }
+        return false;
     }
 
     public String getTranslation(String name){
@@ -29,7 +30,7 @@ public class Dictionnary {
         return translations.get(name);
     }
 
-    public void addTranslation(String fr, String angl){
+    public static void addTranslation(String fr, String angl){
         translations.put(fr,angl);
     }
 
