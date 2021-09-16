@@ -6,25 +6,31 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class Dictionnary {
 
     private String name;
+    private Map<String, String> translations;
 
-    public Dictionnary(String name){
+    public Dictionnary(String name, Map<String, String> translations){
         this.name = name;
+        this.translations = translations;
     }
     
     public String getName(){
     return this.name;
 }
 
-    public int IsEmpty(String name){
-        return 1;
+    public boolean IsEmpty(String name){
+        if (translations.size() ==0) 
+        {
+            return 1;
+        }
     }
 
-    public String getTranslation(){
+    public String getTranslation(String name){
 
-        return "against";
+        return translations.get(name);
     }
-    public int addTranslation(){
-        return 1;
+
+    public void addTranslation(String fr, String angl){
+        translations.put(fr,angl);
     }
 
     
