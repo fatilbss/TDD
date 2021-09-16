@@ -7,4 +7,4 @@ https://github.com/fatilbss/TDD
 
  ## Fake It
 
- 5. Le code de getName() est dupliqué
+ 5. Le nom d'un objet existe 2 fois, dans la classe Dictionnary et dans le test.

@@ -1,11 +1,22 @@
+import org.junit.Test;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 public class Dictionnary {
 
-    private String name="Example";
+    private String name;
 
-    public Dictionnary(){}
+    public Dictionnary(String name){
+        this.name = name;
+    }
     
-    public String getName(String name){
-    return name;
+    public String getName(){
+    return this.name;
 }
+
+    public int IsEmpty(String name){
+        return 1;
+    }
 
 }
