@@ -8,9 +8,9 @@ public class Dictionnary {
     private String name;
     private Map<String, String> translations;
 
-    public Dictionnary(String name, Map<String, String> translations){
+    public Dictionnary(String name){
         this.name = name;
-        this.translations = translations;
+        this.translations = new HashMap<>();
     }
     
     public String getName(){

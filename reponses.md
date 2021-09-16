@@ -11,4 +11,4 @@ https://github.com/fatilbss/TDD
 
  ## Triangulation
 
- 2. Il est possible de faire un test qui implique q'une seule des 2 méthodes à condition que ce soit getTranslation().
+ 2. Il n'est possible de faire un test qui implique q'une seule des 2 méthodes.
