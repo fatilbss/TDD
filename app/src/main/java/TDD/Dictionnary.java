@@ -19,4 +19,13 @@ public class Dictionnary {
         return 1;
     }
 
+    public String getTranslation(){
+
+        return "against";
+    }
+    public int addTranslation(){
+        return 1;
+    }
+
+    
 }

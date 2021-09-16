@@ -6,11 +6,24 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class DictionnaryTest{
 
+    public Dictionnary dict;
+
+@Before public void initialize(){
+    dict = new Dictionnary("Example");
+}
+
 @Test public void testDictionnaryName(){
-    assertThat(Dictionnary.getName(), equalTo("Example");)
+    assertThat(dict.getName(), equalTo("Example"));
 }
 
 @Test public void testDictionnaryIsEmpty(){
-    assertThat(Dictionnary.IsEmpty(), equalTo(1);)
+    assertThat(dict.IsEmpty(), equalTo(1));
 }
+
+@Test public void testOneTranslation() {
+ Dictionnary.addTranslation("contre", "against");
+ assertThat(dict.getTranslation("contre"), equalTo("against"));
+ Dictionnary.addTranslation("voiture", "car");
+ assertThat(dict.getTranslation("voiture"), equalTo("car"));
+
 }

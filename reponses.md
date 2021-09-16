@@ -8,3 +8,7 @@ https://github.com/fatilbss/TDD
  ## Fake It
 
  5. Le nom d'un objet existe 2 fois, dans la classe Dictionnary et dans le test.
+
+ ## Triangulation
+
+ 2. Il est possible de faire un test qui implique q'une seule des 2 méthodes à condition que ce soit getTranslation().
